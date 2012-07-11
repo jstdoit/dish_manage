@@ -1,0 +1,5 @@
+<h1>更新安卓客户端</h1>
+<%= form_tag({:action => :upload}, :multipart => true) do %>
+  <%= file_field_tag 'apk_file' %>
+	<%= submit_tag "Upload" %>
+<% end %>
