@@ -1,5 +1,17 @@
-<h1>更新安卓客户端</h1>
+
+
+
 <%= form_tag({:action => :upload}, :multipart => true) do %>
-  <%= file_field_tag 'apk_file' %>
-	<%= submit_tag "Upload" %>
+<%= file_field_tag 'apk_file' %>
+<br/>
+<br/>
+版本代号<input type="text" name="vs" value="">
+<br/>
+<br/>
+主机版号<input type="text" name="vn" value="">
+<br/>
+<br/>更新<input type="textfield" name="ui" value="">
+<br>
+<br/>
+	<%= submit_tag "提交" %>
 <% end %>
