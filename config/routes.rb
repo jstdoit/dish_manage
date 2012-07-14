@@ -1,4 +1,6 @@
 DishManage::Application.routes.draw do
+  resources :apks
+
   resources :products
 
   post "client/upload"

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vc: MyString
+  vn: MyString
+  update_items: MyString
+  location: MyString
+
+two:
+  vc: MyString
+  vn: MyString
+  update_items: MyString
+  location: MyString

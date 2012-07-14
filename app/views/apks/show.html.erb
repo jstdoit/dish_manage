@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>版本编号:</b>
+  <%= @apk.vc %>
+</p>
+
+<p>
+  <b>版本号:</b>
+  <%= @apk.vn %>
+</p>
+
+<p>
+  <b>更新信息:</b>
+  <%= @apk.update_items %>
+</p>
+
+<p>
+  <b>路径:</b>
+  <%= @apk.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_apk_path(@apk) %> |
+<%= link_to 'Back', apks_path %>

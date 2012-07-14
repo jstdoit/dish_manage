@@ -1,0 +1,29 @@
+<h1>客户端列表</h1>
+
+<table>
+  <tr>
+    <th>版本编号</th>
+    <th>版本号</th>
+    <th>更新信息</th>
+    <th>路径</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apks.each do |apk| %>
+  <tr>
+    <td><%= apk.vc %></td>
+    <td><%= apk.vn %></td>
+    <td><%= apk.update_items %></td>
+    <td><%= apk.location %></td>
+    <td><%= link_to 'Show', apk %></td>
+    <td><%= link_to 'Edit', edit_apk_path(apk) %></td>
+    <td><%= link_to 'Destroy', apk, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '上传APK', new_apk_path %>

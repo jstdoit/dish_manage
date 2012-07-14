@@ -1,0 +1,32 @@
+<%= form_for(@apk) do |f| %>
+  <% if @apk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apk.errors.count, "error") %> prohibited this apk from being saved:</h2>
+
+      <ul>
+      <% @apk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :安卓客户端 %><br />
+    <%= f.file_field :apkfile %>
+  </div>
+  <div class="field">
+    <%= f.label :版本编号 %><br />
+    <%= f.text_field :vc %>
+  </div>
+  <div class="field">
+    <%= f.label :版本号 %><br />
+    <%= f.text_field :vn %>
+  </div>
+  <div class="field">
+    <%= f.label :更新信息 %><br />
+    <%= f.text_area :update_items %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
