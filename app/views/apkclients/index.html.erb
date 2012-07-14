@@ -1,0 +1,27 @@
+<h1>Listing apkclients</h1>
+
+<table>
+  <tr>
+    <th>版本代号</th>
+    <th>主版本号</th>
+    <th>更新描述</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apkclients.each do |apkclient| %>
+  <tr>
+    <td><%= apkclient.version_code %></td>
+    <td><%= apkclient.version_number %></td>
+    <td><%= apkclient.update_items %></td>
+    <td><%= link_to 'Show', apkclient %></td>
+    <td><%= link_to 'Edit', edit_apkclient_path(apkclient) %></td>
+    <td><%= link_to 'Destroy', apkclient, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apkclient', new_apkclient_path %>

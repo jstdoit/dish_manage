@@ -1,9 +1,9 @@
 DishManage::Application.routes.draw do
-  resources :products
-
+  resources :apkclients
   post "client/upload"
 
   get "client/index"
+  get "client/search"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

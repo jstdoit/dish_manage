@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Version code:</b>
+  <%= @apkclient.version_code %>
+</p>
+
+<p>
+  <b>Version number:</b>
+  <%= @apkclient.version_number %>
+</p>
+
+<p>
+  <b>Update items:</b>
+  <%= @apkclient.update_items %>
+</p>
+
+
+<%= link_to 'Edit', edit_apkclient_path(@apkclient) %> |
+<%= link_to 'Back', apkclients_path %>
