@@ -1,7 +1,4 @@
 class ApkclientsController < ApplicationController
-  
-    
-
 
   # GET /apkclients
   # GET /apkclients.json

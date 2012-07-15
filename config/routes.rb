@@ -1,4 +1,9 @@
 DishManage::Application.routes.draw do
+  resources :downloads
+	get "download/down_file"
+
+
+
   resources :apkclients
   post "client/upload"
 
