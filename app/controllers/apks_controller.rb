@@ -10,6 +10,9 @@ class ApksController < ApplicationController
     end
   end
 
+	def download
+	send_file params[:id]
+	end
   # GET /apks/1
   # GET /apks/1.json
   def show

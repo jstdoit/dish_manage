@@ -1,8 +1,11 @@
+# encoding: utf-8
+
 class Apk < ActiveRecord::Base
   attr_accessible :location, :update_items, :vc, :vn, :apkfile
   attr_accessor :apkfile
 
-  validates_presence_of :update_items, :vc, :vn
+  validates_presence_of :update_items, :vn, :vc
+	validate :check_vc_and_vn
 
   before_create :save_apk_to_file
   private
@@ -21,5 +24,12 @@ class Apk < ActiveRecord::Base
 				file.write ver_info.to_json
 		end
   end 
+
+	def check_vc_and_vn
+  if Apk.find_by_vc_and_vn(vc,vn) then
+		errors.add(:vn, "版本已存在") 
+		errors.add(:vc, "版本已存在") 
+		end
+	end
 end
 
