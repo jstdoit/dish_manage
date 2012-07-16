@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Version number:</b>
+  <%= @apkfile.version_number %>
+</p>
+
+<p>
+  <b>Version code:</b>
+  <%= @apkfile.version_code %>
+</p>
+
+<p>
+  <b>Update items:</b>
+  <%= @apkfile.update_items %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @apkfile.url %>
+</p>
+
+<%= link_to 'download', :controller => "apkfiles", :action => "download", :id => @apkfile.url %> |
+<%= link_to 'Edit', edit_apkfile_path(@apkfile) %> |
+<%= link_to 'Back', apkfiles_path %>

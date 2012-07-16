@@ -1,0 +1,30 @@
+<h1>更新列表</h1>
+
+<table>
+  <tr>
+    <th>主版本号</th>
+    <th>版本代号</th>
+    <th>内容更新</th>
+  
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apkfiles.each do |apkfile| %>
+  <tr>
+    <td><%= apkfile.version_number %></td>
+    <td><%= apkfile.version_code %></td>
+    <td><%= apkfile.update_items %></td>
+    
+    <td><%= link_to 'Show', apkfile %></td>
+    <td><%= link_to 'Edit', edit_apkfile_path(apkfile) %></td>
+		<td><%= link_to 'Download',:controller => "apkfiles", :action => "download", :id => apkfile.url%></td>
+    <td><%= link_to 'Destroy', apkfile, confirm: '确定要删除吗？', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'APK上传', new_apkfile_path %>
