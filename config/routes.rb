@@ -1,12 +1,6 @@
 DishManage::Application.routes.draw do
   resources :apks
-
-  resources :products
-
   get 'download' => 'apks#download'
-
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
